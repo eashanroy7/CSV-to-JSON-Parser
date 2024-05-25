@@ -126,8 +126,9 @@ def write_json(data, output_file):
         json.dump(data, file, indent=4)
 
 # Usage
-csv_path = 'user_activities.csv'
-output_json_path = 'aggregated_activities.json'
+# Update the paths below to match the location of your CSV file and where you want the JSON output to be saved
+csv_path = 'user_activities.csv' # Path to the input CSV file. Change this to the path of your CSV file.
+output_json_path = 'aggregated_activities.json' # Path to the output JSON file. Change this to your desired output path.
 try:
     aggregated_data = process_csv_pandas(csv_path)
     write_json(aggregated_data, output_json_path)

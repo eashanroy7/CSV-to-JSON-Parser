@@ -11,17 +11,33 @@ This repository contains a Python script designed to read a CSV file containing 
 - `requirements.txt`: List of dependencies required to run the scripts.
 
 ## How to Run the Scripts
-Ensure Python 3.12.3 or higher is installed on your system.
+- Ensure Python 3.12.3 or higher is installed on your system.
 
-Install required Python libraries:
-```bash
-pip install -r requirements.txt
-```
-Run the script:
-```bash
-python csv_to_json_optimized.py
-```
-Replace csv_to_json_optimized.py with csv_to_json_initial.py to run the initial version.
+- Install required Python libraries:
+    ```bash
+    pip install -r requirements.txt
+    ```
+- Specify the path to your CSV file and the desired output JSON file in csv_to_json_optimized.py  
+
+    - Open the csv_to_json_optimized.py script  
+    - Locate the 'Usage' section at the end of the script.  
+    - Modify the csv_path variable to point to the location of your CSV file. For example:
+  
+        ```bash
+        csv_path = 'path/to/your/user_activities.csv'
+        ```
+    - Change the output_json_path variable to your desired output location for the JSON file. For example:  
+  
+        ```bash
+        output_json_path = 'path/to/your/output/aggregated_activities.json'
+        ```
+    - Save the changes to the script.
+
+- Run the script:
+    ```bash
+    python csv_to_json_optimized.py
+    ```
+    Replace csv_to_json_optimized.py with csv_to_json_initial.py to run the initial version.
 
 ## Background and Approach
 
