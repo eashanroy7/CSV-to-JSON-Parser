@@ -62,13 +62,13 @@ This function processes individual chunks of the CSV data. It:
 
 - Iterates over each row in the chunk to process and validate data:
 
-    -- Constructs a unique record key for each row to check against previously seen records using a temporary file. This helps maintain uniqueness across different chunks.
+    - Constructs a unique record key for each row to check against previously seen records using a temporary file. This helps maintain uniqueness across different chunks.
 
-    -- Validates IP addresses and timestamps to ensure data integrity.
+    - Validates IP addresses and timestamps to ensure data integrity.
 
-    -- Aggregates activities, counts, timestamps, and IP addresses into user_data.
+    - Aggregates activities, counts, timestamps, and IP addresses into user_data.
 
-    -- Catches and logs any data inconsistencies or errors.
+    - Catches and logs any data inconsistencies or errors.
 - Returns a dictionary containing the aggregated data for the chunk.
 
 `merge_dicts(dict1, dict2)`
@@ -79,11 +79,11 @@ This function merges two dictionaries. This ensures that data from multiple chun
 - Manages a temporary file temp_unique_records.txt to track unique records across chunks, ensuring there are no duplicates across the entire dataset.
 - Iterates through the CSV file in chunks:
 
-    -- Validates that each chunk contains the necessary columns.
+    - Validates that each chunk contains the necessary columns.
 
-    -- Calls validate_and_aggregate to process and validate each chunk.
+    - Calls validate_and_aggregate to process and validate each chunk.
 
-    -- Merges the results of each chunk with the main user_data using merge_dicts.
+    - Merges the results of each chunk with the main user_data using merge_dicts.
 
 - Removes the temporary file after processing to clean up the storage.  
 
